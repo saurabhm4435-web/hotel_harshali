@@ -1,6 +1,6 @@
 ## 📋 About the Project
 
-The Vista Oasis Hotel website is a professional showcase for the luxury hotel, designed to provide an exceptional user experience and showcase all the hotel's features and services in an attractive manner. The website features a modern, responsive design that works efficiently on all devices.
+The Hotel website is a professional showcase for the luxury hotel, designed to provide an exceptional user experience and showcase all the hotel's features and services in an attractive manner. The website features a modern, responsive design that works efficiently on all devices.
 
 ## ✨ Features
 
@@ -26,8 +26,8 @@ The Vista Oasis Hotel website is a professional showcase for the luxury hotel, d
 
 ## 📄 License
 
-All rights reserved © Vista Oasis Hotel. This project is private and may not be used or copied without permission.
+All rights reserved © Hotel. This project is private and may not be used or copied without permission.
 
 ## 👤 Author
 
-**Mazen Ali**
+**Saurabh More**

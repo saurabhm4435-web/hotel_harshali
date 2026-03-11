@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wifi, Waves, Sparkles, CarFront, Utensils, Calendar } from 'lucide-react';
+import { Calendar, Utensils, Sparkles, CarFront, MapPin, Route } from 'lucide-react';
 
 interface AmenityProps {
   icon: React.ReactNode;
@@ -15,59 +15,71 @@ const AmenityCard: React.FC<AmenityProps> = ({ icon, title, description }) => {
           {icon}
         </div>
       </div>
-      <h3 className="text-xl font-playfair font-medium mb-2 text-hotel-navy">{title}</h3>
+      <h3 className="text-xl font-playfair font-medium mb-2 text-hotel-navy">
+        {title}
+      </h3>
       <p className="text-gray-600">{description}</p>
     </div>
   );
 };
 
 const Amenities: React.FC = () => {
+
   const amenities = [
     {
-      icon: <Wifi size={24} className="text-hotel-navy" />,
-      title: 'High-Speed WiFi',
-      description: 'Stay connected with complimentary high-speed internet access throughout the hotel.'
-    },
-    {
-      icon: <Waves size={24} className="text-hotel-navy" />,
-      title: 'Swimming Pool',
-      description: 'Relax and unwind in our temperature-controlled indoor and outdoor swimming pools.'
-    },
-    {
-      icon: <Sparkles size={24} className="text-hotel-navy" />,
-      title: 'Luxury Spa',
-      description: 'Indulge in a variety of treatments designed to rejuvenate your body and mind.'
+      icon: <Route size={24} className="text-hotel-navy" />,
+      title: 'Travel Plan',
+      description:
+        'Let us curate your perfect itinerary with personalized travel plans for an unforgettable stay.'
     },
     {
       icon: <Utensils size={24} className="text-hotel-navy" />,
-      title: 'Gourmet Restaurant',
-      description: 'Savor exquisite dishes prepared by our award-winning chefs in our elegant restaurant.'
+      title: 'Meals & Snacks',
+      description:
+        'Enjoy a variety of delicious meals and snacks, thoughtfully prepared to satisfy your cravings throughout the day.'
     },
     {
-      icon: <CarFront size={24} className="text-hotel-navy" />,
-      title: 'Airport Shuttle',
-      description: 'Enjoy complimentary airport transfers for a seamless travel experience.'
+      icon: <Sparkles size={24} className="text-hotel-navy" />,
+      title: 'Room Service',
+      description:
+        'Enjoy 24/7 room service for any emergency or requirement, with meals and snacks delivered during kitchen hours.'
     },
     {
       icon: <Calendar size={24} className="text-hotel-navy" />,
-      title: 'Event Spaces',
-      description: 'Host memorable events in our versatile spaces equipped with the latest technology.'
+      title: 'Event Planning',
+      description:
+        'Host your special occasions with us, and let our expert event planners make your celebrations extraordinary.'
+    },
+    {
+      icon: <CarFront size={24} className="text-hotel-navy" />,
+      title: 'Hire Driver',
+      description:
+        'Travel in comfort and style with our reliable driver hire services, offering seamless transportation.'
+    },
+    {
+      icon: <MapPin size={24} className="text-hotel-navy" />,
+      title: 'Local Attractions',
+      description:
+        'Explore the vibrant surroundings with our curated recommendations for local attractions and activities, making your stay even more enjoyable.'
     }
   ];
 
   return (
     <section id="amenities" className="section bg-white">
       <div className="container-custom">
+
         <h2 className="section-title text-center">
-          <span className="gold-underline">Hotel</span> Amenities
+          <span className="gold-underline">What</span> We Do
         </h2>
+
         <p className="section-subtitle text-center">
-          Discover our wide range of premium services and facilities designed to make your stay exceptional.
+          Discover our services designed to make your stay comfortable,
+          convenient, and memorable.
         </p>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           {amenities.map((amenity, index) => (
-            <AmenityCard 
+            <AmenityCard
               key={index}
               icon={amenity.icon}
               title={amenity.title}
@@ -75,51 +87,70 @@ const Amenities: React.FC = () => {
             />
           ))}
         </div>
-        
+
+        {/* Transport Section */}
         <div className="mt-16 bg-hotel-navy rounded-lg overflow-hidden shadow-xl">
           <div className="flex flex-col md:flex-row">
+
             <div className="md:w-1/2 p-8 md:p-12">
-              <h3 className="text-2xl md:text-3xl font-playfair text-white mb-4">Exclusive VIP Package</h3>
+              <h3 className="text-2xl md:text-3xl font-playfair text-white mb-4">
+                Travel & Transport Assistance
+              </h3>
+
               <p className="text-gray-300 mb-6">
-                Elevate your stay with our exclusive VIP package, including premium services and special amenities designed for the discerning traveler.
+                We ensure smooth and comfortable travel for our guests by
+                offering reliable transport arrangements and local travel
+                guidance throughout your stay.
               </p>
+
               <ul className="space-y-2 mb-8">
+
                 <li className="flex items-center text-white">
-                  <svg className="w-5 h-5 text-hotel-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  <svg className="w-5 h-5 text-hotel-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  Priority Check-in and Late Check-Out
+                  Local Sightseeing Arrangements
                 </li>
+
                 <li className="flex items-center text-white">
-                  <svg className="w-5 h-5 text-hotel-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  <svg className="w-5 h-5 text-hotel-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  Complimentary Breakfast and Dinner
+                  Private Driver on Request
                 </li>
+
                 <li className="flex items-center text-white">
-                  <svg className="w-5 h-5 text-hotel-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  <svg className="w-5 h-5 text-hotel-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  Daily Spa Treatment
+                  Cab & Taxi Booking Assistance
                 </li>
+
                 <li className="flex items-center text-white">
-                  <svg className="w-5 h-5 text-hotel-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  <svg className="w-5 h-5 text-hotel-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  Personal Concierge Service
+                  Parking Facility for Guests
                 </li>
+
               </ul>
-              <button className="btn-secondary">Learn More</button>
+
+              <button className="btn-secondary">
+                Contact Reception
+              </button>
             </div>
+
             <div className="md:w-1/2">
-              <img 
-                src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3270&q=80" 
-                alt="VIP Experience" 
+              <img
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64"
+                alt="Travel Assistance"
                 className="w-full h-full object-cover"
               />
             </div>
+
           </div>
         </div>
+
       </div>
     </section>
   );

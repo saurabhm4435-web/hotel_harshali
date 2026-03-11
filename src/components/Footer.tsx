@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Column 1 - About */}
           <div>
-            <h3 className="text-2xl font-playfair mb-4">Vista Oasis</h3>
+            <h3 className="text-2xl font-playfair mb-4">Harshali Residency</h3>
             <p className="mb-6 text-gray-300">Experience luxury and comfort at our award-winning hotel, providing exceptional service and unforgettable experiences since 1992.</p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-hotel-gold">
@@ -93,7 +93,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 mb-4 md:mb-0">
-              © {new Date().getFullYear()} Vista Oasis. All rights reserved.
+              © {new Date().getFullYear()} Harshali Residency. All rights reserved.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-hotel-gold text-sm">Privacy Policy</a>

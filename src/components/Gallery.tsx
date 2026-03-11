@@ -9,35 +9,20 @@ const Gallery: React.FC = () => {
   
   const images = [
     {
-      src: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3270&q=80',
-      alt: 'Hotel Lobby',
+      src: '/resto_staff.png',
+      alt: 'Hotel Staff',
       category: 'Interior'
     },
     {
-      src: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
-      alt: 'Deluxe Room',
+      src: '/executive_png.png',
+      alt: 'Executive Room',
       category: 'Rooms'
     },
     {
-      src: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3270&q=80',
-      alt: 'Hotel Pool',
+      src: '/resto_lobby.png',
+      alt: 'Hotel Lobby',
       category: 'Amenities'
     },
-    {
-      src: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
-      alt: 'Executive Suite',
-      category: 'Rooms'
-    },
-    {
-      src: 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Restaurant',
-      category: 'Dining'
-    },
-    {
-      src: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1760&q=80',
-      alt: 'Spa',
-      category: 'Amenities'
-    }
   ];
 
   const openModal = (src: string) => {

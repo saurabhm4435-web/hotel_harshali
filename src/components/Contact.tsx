@@ -45,14 +45,14 @@ const Contact: React.FC = () => {
                   <Phone className="mr-3 text-hotel-gold" size={20} />
                   <div>
                     <p className="font-medium">Phone</p>
-                    <p className="text-gray-300">+1 (555) 123-4567</p>
+                    <p className="text-gray-300">+917030324141</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Mail className="mr-3 text-hotel-gold" size={20} />
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-gray-300">reservations@vistaoasis.com</p>
+                    <p className="text-gray-300">hotelharshaliresidency@gmail.com</p>
                   </div>
                 </div>
               </div>

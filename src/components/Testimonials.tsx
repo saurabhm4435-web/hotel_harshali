@@ -47,7 +47,7 @@ const TestimonialCard: React.FC<TestimonialProps> = ({ content, author, location
 const Testimonials: React.FC = () => {
   const testimonials = [
     {
-      content: "The Vista Oasis exceeded all our expectations. The rooms were impeccably clean, the staff was attentive, and the amenities were top-notch. We'll definitely return for our next vacation.",
+      content: "The Harshali Residency exceeded all our expectations. The rooms were impeccably clean, the staff was attentive, and the amenities were top-notch. We'll definitely return for our next vacation.",
       author: "Emma Thompson",
       location: "London, UK",
       rating: 5,
@@ -61,7 +61,7 @@ const Testimonials: React.FC = () => {
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
     },
     {
-      content: "We celebrated our anniversary at Vista Oasis and it was magical. The staff arranged a special dinner for us and the spa experience was incredibly relaxing. A perfect romantic getaway!",
+      content: "We celebrated our anniversary at Harshali Residency and it was magical. The staff arranged a special dinner for us and the spa experience was incredibly relaxing. A perfect romantic getaway!",
       author: "Sarah Miller",
       location: "New York, USA",
       rating: 5,
@@ -76,7 +76,7 @@ const Testimonials: React.FC = () => {
           <span className="gold-underline">Guest</span> Testimonials
         </h2>
         <p className="section-subtitle text-center">
-          Hear what our guests have to say about their experiences at Vista Oasis.
+          Hear what our guests have to say about their experiences at Harshali Residency.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">

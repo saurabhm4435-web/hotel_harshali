@@ -24,7 +24,7 @@ const Rooms: React.FC = () => {
       price: 199,
       capacity: 2,
       size: 35,
-      image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
+      image: '/zz.png',
       amenities: ['Free WiFi', 'Air Conditioning', 'Mini Bar', 'Flat Screen TV']
     },
     {
@@ -34,29 +34,30 @@ const Rooms: React.FC = () => {
       price: 349,
       capacity: 2,
       size: 60,
-      image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+      image: '/executive_png.png',
       amenities: ['Free WiFi', 'Air Conditioning', 'Mini Bar', 'Flat Screen TV', 'Work Desk', 'Bath Tub']
     },
-    {
-      id: 'family',
-      name: 'Family Room',
-      description: 'Perfect for families, this room features two queen beds and extra space.',
-      price: 279,
-      capacity: 4,
-      size: 45,
-      image: 'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1970&q=80',
-      amenities: ['Free WiFi', 'Air Conditioning', 'Mini Bar', 'Flat Screen TV', 'Kid-Friendly Amenities']
-    },
-    {
-      id: 'penthouse',
-      name: 'Penthouse Suite',
-      description: 'Our most luxurious offering with exceptional views, private terrace and personalized service.',
-      price: 599,
-      capacity: 4,
-      size: 120,
-      image: 'https://images.unsplash.com/photo-1591088398332-8a7791972843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
-      amenities: ['Free WiFi', 'Air Conditioning', 'Full Bar', 'Flat Screen TV', 'Private Terrace', 'Butler Service', 'Jacuzzi']
-    }
+    
+    // {
+    //   id: 'family',
+    //   name: 'Family Room',
+    //   description: 'Perfect for families, this room features two queen beds and extra space.',
+    //   price: 279,
+    //   capacity: 4,
+    //   size: 45,
+    //   image: 'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1970&q=80',
+    //   amenities: ['Free WiFi', 'Air Conditioning', 'Mini Bar', 'Flat Screen TV', 'Kid-Friendly Amenities']
+    // },
+    // {
+    //   id: 'penthouse',
+    //   name: 'Penthouse Suite',
+    //   description: 'Our most luxurious offering with exceptional views, private terrace and personalized service.',
+    //   price: 599,
+    //   capacity: 4,
+    //   size: 120,
+    //   image: 'https://images.unsplash.com/photo-1591088398332-8a7791972843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    //   amenities: ['Free WiFi', 'Air Conditioning', 'Full Bar', 'Flat Screen TV', 'Private Terrace', 'Butler Service', 'Jacuzzi']
+    // }
   ];
 
   return (
@@ -84,18 +85,18 @@ const Rooms: React.FC = () => {
           
           {roomTypes.map((room) => (
             <TabsContent key={room.id} value={room.id} className="animate-fade-in">
-              <div className="flex flex-col lg:flex-row gap-8">
+              <div className="flex flex-col lg:flex-row gap-8 items-stretch">
                 <div className="lg:w-2/3">
                   <div className="rounded-lg overflow-hidden shadow-lg">
                     <img 
                       src={room.image} 
                       alt={room.name} 
-                      className="w-full h-[300px] md:h-[400px] object-cover" 
+                      className="w-full h-[300px] md:h-[500px] object-cover" 
                     />
                   </div>
                 </div>
                 <div className="lg:w-1/3">
-                  <Card>
+                  <Card className="h-full flex flex-col">
                     <CardHeader>
                       <CardTitle className="font-playfair text-2xl">{room.name}</CardTitle>
                       <CardDescription>{room.description}</CardDescription>
@@ -129,7 +130,7 @@ const Rooms: React.FC = () => {
                         </ul>
                       </div>
                     </CardContent>
-                    <CardFooter>
+                    <CardFooter className="mt-auto">
                       <Button className="btn-secondary w-full">Book Now</Button>
                     </CardFooter>
                   </Card>
