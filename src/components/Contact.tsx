@@ -145,7 +145,7 @@ const Contact: React.FC = () => {
         </div>
         
         {/* Special Offers Section */}
-        <div className="mt-16 bg-gradient-to-r from-hotel-navy to-blue-900 rounded-lg p-8 text-white">
+        {/* <div className="mt-16 bg-gradient-to-r from-hotel-navy to-blue-900 rounded-lg p-8 text-white">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-6 md:mb-0">
               <h3 className="text-2xl font-playfair mb-2">Special Offer: 15% Off Your First Stay</h3>
@@ -153,7 +153,7 @@ const Contact: React.FC = () => {
             </div>
             <Button className="btn-secondary">Book Now</Button>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

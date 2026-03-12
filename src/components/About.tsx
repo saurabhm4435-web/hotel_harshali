@@ -31,11 +31,11 @@ const About: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <div className="border-l-4 border-hotel-gold pl-4">
-                <p className="text-3xl font-playfair text-hotel-navy">150+</p>
+                <p className="text-3xl font-playfair text-hotel-navy">50+</p>
                 <p className="text-gray-500">Luxury Rooms</p>
               </div>
               <div className="border-l-4 border-hotel-gold pl-4">
-                <p className="text-3xl font-playfair text-hotel-navy">15+</p>
+                <p className="text-3xl font-playfair text-hotel-navy">7+</p>
                 <p className="text-gray-500">Years of Excellence</p>
               </div>
               <div className="border-l-4 border-hotel-gold pl-4">
@@ -43,7 +43,7 @@ const About: React.FC = () => {
                 <p className="text-gray-500">Customer Service</p>
               </div>
             </div>
-            <Button className="btn-outline">Learn More</Button>
+           {/* <Button className="btn-outline">Learn More</Button> */}
           </div>
         </div>
       </div>

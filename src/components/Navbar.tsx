@@ -66,7 +66,7 @@ const Navbar: React.FC = () => {
     }`}>
       <div className="container-custom flex justify-between items-center">
         <a href="/" className="flex items-center">
-          <h1 className="text-2xl md:text-3xl font-bold font-playfair text-hotel-navy">Harshali Residency</h1>
+          <img src="/logo_hotel.png" alt="Hotel Logo" className="h-10 w-auto" />
         </a>
         
         {/* Mobile menu button */}

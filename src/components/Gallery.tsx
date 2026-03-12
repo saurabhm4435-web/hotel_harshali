@@ -64,9 +64,9 @@ const Gallery: React.FC = () => {
           ))}
         </div>
         
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <Button variant="outline" className="btn-outline">View Full Gallery</Button>
-        </div>
+        </div> */}
       </div>
       
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>

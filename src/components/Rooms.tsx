@@ -8,7 +8,7 @@ interface RoomType {
   id: string;
   name: string;
   description: string;
-  price: number;
+  bed: string;
   capacity: number;
   size: number;
   image: string;
@@ -21,7 +21,7 @@ const Rooms: React.FC = () => {
       id: 'deluxe',
       name: 'Deluxe Room',
       description: 'Spacious room with modern amenities and a beautiful city view.',
-      price: 199,
+      bed: 'King Size Bed',
       capacity: 2,
       size: 35,
       image: '/zz.png',
@@ -31,11 +31,11 @@ const Rooms: React.FC = () => {
       id: 'suite',
       name: 'Executive Suite',
       description: 'Luxury suite with a separate living area and stunning panoramic views.',
-      price: 349,
+      bed: 'King Size Bed',
       capacity: 2,
       size: 60,
       image: '/executive_png.png',
-      amenities: ['Free WiFi', 'Air Conditioning', 'Mini Bar', 'Flat Screen TV', 'Work Desk', 'Bath Tub']
+      amenities: ['Free WiFi', 'Air Conditioning', 'Mini Bar', 'Flat Screen TV']
     },
     
     // {
@@ -113,7 +113,7 @@ const Rooms: React.FC = () => {
                         </div>
                         <div>
                           <p className="text-gray-500">Price</p>
-                          <p className="text-hotel-navy">${room.price}/night</p>
+                          <p className="text-hotel-navy">{room.bed}</p>
                         </div>
                       </div>
                       <div className="mb-4">
@@ -140,9 +140,9 @@ const Rooms: React.FC = () => {
           ))}
         </Tabs>
         
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <Button variant="outline" className="btn-outline">View All Rooms</Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
