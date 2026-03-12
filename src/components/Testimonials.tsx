@@ -8,7 +8,6 @@ interface TestimonialProps {
   author: string;
   location: string;
   rating: number;
-  //image: string;
 }
 
 const TestimonialCard: React.FC<TestimonialProps> = ({ content, author, location, rating }) => {
@@ -27,13 +26,6 @@ const TestimonialCard: React.FC<TestimonialProps> = ({ content, author, location
       </CardContent>
       <CardFooter className="flex items-center justify-between border-t pt-4">
         <div className="flex items-center">
-          {/* <div className="w-10 h-10 rounded-full overflow-hidden mr-3">
-            <img
-              src={image}
-              alt={author}
-              className="w-full h-full object-cover"
-            />
-          </div> */}
           <div>
             <p className="font-medium">{author}</p>
             <p className="text-sm text-gray-500">{location}</p>
@@ -50,22 +42,19 @@ const Testimonials: React.FC = () => {
       content: "Staying at Hotel Harshali Residency was an incredible experience. The rooms were cozy and well-maintained, and the service was exceptional. The location is perfect for exploring nearby attractions. Highly recommend for anyone visiting the area!",
       author: "Darshan Masane",
       location: "Shelu, Maharashtra",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+      rating: 5
     },
     {
       content: "I had a wonderful stay at Hotel Harshali Residency. The staff was friendly and went out of their way to make sure we had everything we needed. The amenities were top-notch, and the food was delicious. A perfect getaway spot!",
       author: "Himanshu Karnuk",
       location: "Panvel, Maharashtra",
-      rating: 4,
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+      rating: 4
     },
     {
       content: "The experience at Hotel Harshali Residency exceeded my expectations. The atmosphere was relaxing, and the rooms were elegantly designed. It’s an ideal place for a peaceful retreat with easy access to local attractions.",
       author: "Sahil Lakhimale",
       location: "",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80"
+      rating: 5
     }
   ];
 
@@ -87,22 +76,9 @@ const Testimonials: React.FC = () => {
               author={testimonial.author}
               location={testimonial.location}
               rating={testimonial.rating}
-              //image={testimonial.image}
             />
           ))}
         </div>
-        
-        {/* <div className="mt-12 text-center">
-          <a 
-            href="#" 
-            className="inline-flex items-center font-medium text-hotel-navy hover:text-hotel-gold transition-colors"
-          >
-            Read more reviews on TripAdvisor
-            <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-            </svg>
-          </a>
-        </div> */}
       </div>
     </section>
   );

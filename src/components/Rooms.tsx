@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -36,28 +36,7 @@ const Rooms: React.FC = () => {
       size: 60,
       image: '/executive_png.png',
       amenities: ['Free WiFi', 'Air Conditioning', 'Mini Bar', 'Flat Screen TV']
-    },
-    
-    // {
-    //   id: 'family',
-    //   name: 'Family Room',
-    //   description: 'Perfect for families, this room features two queen beds and extra space.',
-    //   price: 279,
-    //   capacity: 4,
-    //   size: 45,
-    //   image: 'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1970&q=80',
-    //   amenities: ['Free WiFi', 'Air Conditioning', 'Mini Bar', 'Flat Screen TV', 'Kid-Friendly Amenities']
-    // },
-    // {
-    //   id: 'penthouse',
-    //   name: 'Penthouse Suite',
-    //   description: 'Our most luxurious offering with exceptional views, private terrace and personalized service.',
-    //   price: 599,
-    //   capacity: 4,
-    //   size: 120,
-    //   image: 'https://images.unsplash.com/photo-1591088398332-8a7791972843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
-    //   amenities: ['Free WiFi', 'Air Conditioning', 'Full Bar', 'Flat Screen TV', 'Private Terrace', 'Butler Service', 'Jacuzzi']
-    // }
+    }
   ];
 
   return (
@@ -139,10 +118,6 @@ const Rooms: React.FC = () => {
             </TabsContent>
           ))}
         </Tabs>
-        
-        {/* <div className="text-center mt-12">
-          <Button variant="outline" className="btn-outline">View All Rooms</Button>
-        </div> */}
       </div>
     </section>
   );

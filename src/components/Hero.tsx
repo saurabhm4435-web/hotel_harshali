@@ -3,6 +3,13 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 
 const Hero: React.FC = () => {
+  const handleExploreRooms = () => {
+    const roomsSection = document.getElementById('rooms');
+    if (roomsSection) {
+      roomsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="relative h-screen w-full overflow-hidden">
       {/* Hero Background Image */}
@@ -11,7 +18,6 @@ const Hero: React.FC = () => {
         style={{ 
           backgroundImage: "url('/hero_11.webp')",
           filter: 'brightness(0.8)'
-          //
         }}
       ></div>
       
@@ -26,7 +32,7 @@ const Hero: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button className="btn-secondary text-lg px-8 py-6">Book Now</Button>
-            <Button variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-hotel-gold hover:border-hotel-gold hover:text-hotel-navy transition-all duration-300 text-lg px-8 py-6">
+            <Button variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-hotel-gold hover:border-hotel-gold hover:text-hotel-navy transition-all duration-300 text-lg px-8 py-6" onClick={handleExploreRooms}>
               Explore Rooms
             </Button>
           </div>

@@ -43,7 +43,6 @@ const About: React.FC = () => {
                 <p className="text-gray-500">Customer Service</p>
               </div>
             </div>
-           {/* <Button className="btn-outline">Learn More</Button> */}
           </div>
         </div>
       </div>
