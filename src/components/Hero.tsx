@@ -3,10 +3,10 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 
 const Hero: React.FC = () => {
-  const handleExploreRooms = () => {
-    const roomsSection = document.getElementById('rooms');
-    if (roomsSection) {
-      roomsSection.scrollIntoView({ behavior: 'smooth' });
+  const handleExploreMore = () => {
+    const toursSection = document.getElementById('tours');
+    if (toursSection) {
+      toursSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -27,13 +27,13 @@ const Hero: React.FC = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-playfair mb-4">
             Discover Luxury<br />at Harshali Residency
           </h1>
-          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto font-bold">
             Experience comfort and peaceful surroundings at Harshali Residency, where every stay feels welcoming.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button className="btn-secondary text-lg px-8 py-6">Book Now</Button>
-            <Button variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-hotel-gold hover:border-hotel-gold hover:text-hotel-navy transition-all duration-300 text-lg px-8 py-6" onClick={handleExploreRooms}>
-              Explore Rooms
+            <Button variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-hotel-gold hover:border-hotel-gold hover:text-hotel-navy transition-all duration-300 text-lg px-8 py-6" onClick={handleExploreMore}>
+              Explore More
             </Button>
           </div>
         </div>

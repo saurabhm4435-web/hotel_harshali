@@ -104,7 +104,7 @@ const Amenities: React.FC = () => {
         </div>
 
         {/* Travel Section */}
-        <div className="mt-16 bg-hotel-navy rounded-lg overflow-hidden shadow-xl">
+        <div id="tours" className="mt-16 bg-hotel-navy rounded-lg overflow-hidden shadow-xl scroll-mt-24">
           <div className="flex flex-col md:flex-row">
 
             <div className="md:w-1/2 p-8 md:p-12">
