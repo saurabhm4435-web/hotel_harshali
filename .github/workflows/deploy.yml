@@ -1,38 +1,40 @@
-name: Deploy Hotel Website   # ✅ You can keep this or rename (just display name)
+name: Deploy Hotel Website
 
 on:
   push:
     branches:
-      - main   # ⚠️ IMPORTANT: Must match your Git branch
-               # If your branch is 'master', change to 'master'
+      - main
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest   # ✅ GitHub's temporary server (no change needed)
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3   # ✅ Downloads your repo (no change)
+        uses: actions/checkout@v3
 
       - name: Install Dependencies
-        run: npm install   # ✅ Keep if your project uses npm (React/Vite = OK)
+        run: npm install
 
       - name: Build Project
-        run: npm run build   # ✅ This creates 'dist' folder (important)
+        run: npm run build
 
-      - name: Deploy to EC2
-        uses: appleboy/scp-action@v0.1.4   # ✅ Prebuilt deploy tool
-
+      # 🔥 NEW STEP: Clean old files
+      - name: Clean old files on server
+        uses: appleboy/ssh-action@v0.1.10
         with:
-          host: ${{ secrets.HOST }}   # ⚠️ YOU MUST ADD in GitHub Secrets
-                                      # value = your EC2 IP (54.175.25.143)
+          host: ${{ secrets.HOST }}
+          username: ec2-user
+          key: ${{ secrets.KEY }}
+          script: rm -rf /var/www/hotel/*
 
-          username: ec2-user   # ✅ Correct for Amazon Linux (keep as is)
-
-          key: ${{ secrets.KEY }}   # ⚠️ YOU MUST ADD in GitHub Secrets
-                                    # value = FULL .pem file content
-
-          source: "dist/*"   # ✅ Folder to upload (no change)
-
-          target: "/var/www/hotel"   # ⚠️ Must match your EC2 folder
-                                     # (you already created this, so OK)
+      # 🔥 FIXED DEPLOY STEP
+      - name: Deploy to EC2
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.HOST }}
+          username: ec2-user
+          key: ${{ secrets.KEY }}
+          source: "dist"
+          target: "/var/www/hotel"
+          strip_components: 1
