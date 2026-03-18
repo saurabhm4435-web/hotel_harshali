@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
         <div className="animate-fade-in">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-playfair mb-4">
-            Discover Luxury<br />at Test Residency
+            Discover Luxury<br />at Test11 Residency
           </h1>
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto font-bold">
             Experience comfort and peaceful surroundings at Harshali Residency, where every stay feels welcoming.
