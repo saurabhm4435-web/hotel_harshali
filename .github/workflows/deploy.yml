@@ -1,0 +1,38 @@
+name: Deploy Hotel Website   # ✅ You can keep this or rename (just display name)
+
+on:
+  push:
+    branches:
+      - main   # ⚠️ IMPORTANT: Must match your Git branch
+               # If your branch is 'master', change to 'master'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest   # ✅ GitHub's temporary server (no change needed)
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3   # ✅ Downloads your repo (no change)
+
+      - name: Install Dependencies
+        run: npm install   # ✅ Keep if your project uses npm (React/Vite = OK)
+
+      - name: Build Project
+        run: npm run build   # ✅ This creates 'dist' folder (important)
+
+      - name: Deploy to EC2
+        uses: appleboy/scp-action@v0.1.4   # ✅ Prebuilt deploy tool
+
+        with:
+          host: ${{ secrets.HOST }}   # ⚠️ YOU MUST ADD in GitHub Secrets
+                                      # value = your EC2 IP (54.175.25.143)
+
+          username: ec2-user   # ✅ Correct for Amazon Linux (keep as is)
+
+          key: ${{ secrets.KEY }}   # ⚠️ YOU MUST ADD in GitHub Secrets
+                                    # value = FULL .pem file content
+
+          source: "dist/*"   # ✅ Folder to upload (no change)
+
+          target: "/var/www/hotel"   # ⚠️ Must match your EC2 folder
+                                     # (you already created this, so OK)
